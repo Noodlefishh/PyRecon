@@ -191,6 +191,9 @@ if main_menu_choice == 3 :
         domain = input("Enter the domain name: ")
         query_domain(domain)
 
+#########################
+#   POOR'S MAN NMAP     #
+#########################
 if main_menu_choice == 4:
 
     # List of common ports
