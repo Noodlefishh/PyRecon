@@ -10,8 +10,8 @@ At the moment, these modules have been implemented and are fully functional:
 
     - Subdomain crawler with a subdomain list of +/- 30k entries
     - SSL certificate verification
-    - DNS entry validation for A, TXT, CNAME, MX & NS records   
-    - Port scanner
+    - DNS records validation 
+    - Poor's man port scanner
 
 
 
