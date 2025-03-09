@@ -30,58 +30,38 @@ main_menu_choice = int(input("Please choose what you want to do : "))
 if main_menu_choice == 1 :
    print("You are about to scan a domain, please enter the targeted domain: ")
 
-   # function for scanning subdomains
    def domain_scanner(domain_name, sub_domnames):
        print('-----------Scanner Started-----------')
        print('-------Scanning for subdomain--------')
        print('-------Grab a coffee and enjoy-------')
 
-       # loop for getting URL's
        for subdomain in sub_domnames:
 
-           # making url by putting subdomain one by one
            url = f"https://{subdomain}.{domain_name}"
 
-           # using try catch block to avoid crash of the program
            try:
-
-               # sending get request to the url
                requests.get(url)
-
-               # if after putting subdomain one by one url is valid then printing the url
                print(f'[+] {url}')
-
-           # if url is invalid then pass it
            except requests.ConnectionError:
                pass
        print('\n')
        print('----Scanning Finished and stopped----')
 
-
-   # main function
    if __name__ == '__main__':
 
-       # inputting the domain name
        dom_name = input("Enter the Domain Name : ")
        print('\n')
 
-       # opening the subdomain text file
        with open('subdomain_list2025.txt', 'r') as file:
-
-           # reading the file
            name = file.read()
-
-           # using splitlines() function storing the list of splitted strings
            sub_dom = name.splitlines()
 
-       # calling the function for scanning the subdomains and getting the url
        domain_scanner(dom_name, sub_dom)
 
 #########################
 #   CERTIFICATE MODULE  #
 #########################
 elif main_menu_choice == 2 :
-    #Certificate stuff
 
     def get_ssl_certificate(hostname, port=443):
         try:
