@@ -12,6 +12,7 @@ At the moment, these modules have been implemented and are fully functional:
     - SSL certificate verification
     - DNS records validation 
     - Poor's man port scanner
+    - HTTP endpoint validation
 
 
 
