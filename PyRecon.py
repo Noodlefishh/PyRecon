@@ -4,8 +4,6 @@
 # Free to use -> No BS -> you do you.
 # subdomain list provided by rbsec & rajesh6927 on GitHub
 from time import sleep
-
-import os
 import requests
 import ssl
 import socket
